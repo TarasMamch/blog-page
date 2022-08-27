@@ -1,0 +1,25 @@
+<div id="main-post-container">
+    <div class="create-comment-main-section">
+        <div class="post">
+            <div class="post-header">
+                <h3 id="title"></h3>
+                <span id="user-info"></span>
+            </div>
+            <span id="content"></span>
+        </div>
+    </div>
+    <footer>
+        <button class="new-post-button" onclick="addComment()">Add Comment</button>
+    </footer>
+</div>
+
+<div id="create-comment-container">
+    <h1>Create New Comment</h1>
+    <div id="create-comment-main-section">
+        <span>Content</span>
+        {{!-- <textarea id="content"> --}}
+        <button onclick="createComment()">Create</button>
+    </div>
+</div>
+
+<script src="/js/commentPage.js"></script>
