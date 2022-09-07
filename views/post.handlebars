@@ -8,17 +8,18 @@
             <span id="content"></span>
         </div>
     </div>
+    <div id="comment-container"></div>
     <footer>
         <button class="new-post-button" onclick="addComment()">Add Comment</button>
     </footer>
 </div>
 
 <div id="create-comment-container">
-    <h1>Create New Comment</h1>
+    <div id="create-comment-header"></div>
     <div id="create-comment-main-section">
-        <span>Content</span>
-        {{!-- <textarea id="content"> --}}
-        <button onclick="createComment()">Create</button>
+        <span>Comment</span>
+        <textarea id="comment-content"></textarea>
+        <button onclick="makeComment()">Submit</button>
     </div>
 </div>
 

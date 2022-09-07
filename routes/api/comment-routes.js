@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const { Post, User, Comment } = require('../../models')
+const { Comment, User, Post } = require('../../models')
 
 router.get("/", async (req, res) => {
     try {
-        const data = await Post.findAll({
-            include: [User, Comment]
+        const data = await Comment.findAll({
+            include: [User, Post]
         })
         res.json(data)
     } catch (err) {
@@ -13,21 +13,11 @@ router.get("/", async (req, res) => {
     }
 })
 
-// router.get("/:id", async (req, res) => {
-//     try {
-//         const data = await Post.findByPk({
-//             include: [User, Comment]
-//         })
-//     } catch (err) {
-//         res.status(500).json({ msg: "ERROR", err })
-//     }
-// })
-
 router.post("/", (req, res) => {
-    Post.create({
-        title: req.body.title,
+    Comment.create({
         content: req.body.content,
         UserId: req.session.user.id,
+        PostId: req.body.PostId
     }).then(data => {
         res.json(data)
     }).catch(err => {

@@ -152,3 +152,44 @@ footer {
     background-color: gray;
     border-radius: 15px;
 }
+
+#create-comment-container {
+    display: none;
+    flex-direction: column;
+    width: 80%;
+    margin: 0px auto;
+    border: 1px solid rgb(32, 22, 22);
+}
+
+#create-comment-main-section {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+#create-comment-header {
+    background-color: rgb(32, 22, 22);
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+#create-comment-main-section button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: grey;
+    border: none;
+    border-radius: 5px;
+}
+
+#comment-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0px auto;
+}
+
+#comment-container span {
+    margin: 20px 10px;
+    border: 1px solid rgb(32, 22, 22);
+    padding: 10px;
+}

@@ -54,7 +54,7 @@ async function generatePosts() {
 }
 
 function editPost(title) {
-
+    console.log(title)
 }
 
 
